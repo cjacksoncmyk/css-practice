@@ -5,6 +5,9 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -29,7 +32,7 @@ img {
 }
 
 img:hover {
-  transform: scale(2) rotate(1080deg);
+  transform: scale(1.5) rotate(1080deg);
 }
 
 .caption {
@@ -40,4 +43,51 @@ img:hover {
   font-size: 3em;
   color: white;
   margin-top: -95px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background: lightblue;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 2.5em;
+    color: white;
+    text-align: center;
+    margin-bottom: -55px;
+  }
+
+  img {
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    transition: all 1s;
+    transition-timing-function: ease-in-out;
+  }
+
+  img:hover {
+    transform: scale(1.5) rotate(1080deg);
+  }
+
+  .caption {
+    display: block;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 2.5em;
+    color: white;
+    margin-top: -55px;
+  }
 }
